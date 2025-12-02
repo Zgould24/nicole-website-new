@@ -1,0 +1,119 @@
+.Footer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 8%;
+    width: 100%;
+    padding: 50px;
+    box-sizing: border-box;
+
+    background-color: var(--body-text-color);
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+     width: 100%;
+}
+
+.footer-contact > a {
+    position: relative;
+    padding: 8px 16px; 
+
+    font-family: var(--body-font);
+    font-weight: 200;
+    color: white;
+    border: 1px solid white;
+    text-decoration: none;
+
+    transition: all 300ms ease;
+}
+
+.footer-contact > a:hover {
+    cursor: pointer;
+    background-color: var(--rose);
+    border-color: var(--rose);
+}
+
+.footer-navlinks {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: 100%;
+    width: 100%;
+}
+
+
+.footer-navlinks > a {
+    font-family: var(--body-font);
+    font-weight: 200;
+    text-decoration: none;
+    color: white;
+
+    transition: all 300ms ease;
+}
+
+.footer-navlinks > a:hover {
+    color: var(--rose);
+}
+
+.footer-socials {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+     width: 100%;
+}
+
+.footer-socials > h4 {
+    margin: 0 0 20px;
+
+    font-family: var(--body-font);
+    font-weight: 200;
+    font-size: 20px;
+    color: white;
+}
+
+.footer-socials > h4 > a {
+    color: var(--pastry);
+
+    transition: all 300ms ease;
+}
+
+#icons8-ad {
+    margin: 20px 0;
+    color: white;
+    font-weight: 300;
+    font-size: 16px;
+}
+
+#icons8-ad > a {
+    color: var(--olive);
+    font-weight: 700;
+    transition: all 200ms ease;
+}
+
+#icons8-ad > a:hover {
+    color: white;
+}
+
+.footer-socials > h4 > a:hover {
+    color: var(--eraser);
+}
+
+@media(max-width: 700px) {
+    .Footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+    .footer-contact, .footer-socials {
+        align-items: center;
+    }
+
+    .footer-socials > h4 {
+        text-align: center;
+    }
+}

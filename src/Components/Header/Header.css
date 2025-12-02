@@ -1,0 +1,32 @@
+.Header {
+  margin-bottom: var(--marginBtmOffset);
+  z-index: 10;   
+}
+
+h3 {
+  font-family: var(--header-font);
+  font-size: 32px;
+  color: var(--forest);
+  outline: 5px solid var(--forest);
+  outline-offset: 5px;
+  width: fit-content;
+  padding: 30px 50px;
+  min-width: 150px;
+  text-align: center;
+  border: 1px solid var(--forest);
+  opacity: 0;
+  background-color: white;
+  transform: translateY(var(--offsetY));
+}
+
+.fade-in-header {
+  animation: fadeInHeader 1s ease forwards;
+  animation-delay: 200ms;
+}
+
+@keyframes fadeInHeader {
+  100%{
+    opacity: 1;
+    transform: translateY(var(--originY));
+  }  
+}

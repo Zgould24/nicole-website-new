@@ -1,0 +1,67 @@
+:root {
+  --olive: #A4A579;
+  --forest: #626959;
+  --pastry: #EDDBC5;
+  --rose: #D49A98;
+  --eraser: #AD7D73;
+  --peach: #E9B18C;
+  --body-text-color: #444444;
+  
+  --leather-brown: #39332D;
+  --leaf-green: #474133;
+  --caffe-brown: #5F4F44;
+  --wet-sand: #736659;
+  --gray-beige: #D3CEC5;
+  --shadow: 10px 10px 20px rgba(0, 0, 0, 0.2);
+
+  --title-font: 'Parisienne', cursive;
+  --header-font: 'Poiret One', sans-serif;
+  --body-font: 'Roboto', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.fade-in-static {
+  animation: fadeIn 1s ease forwards;
+  animation-delay: 200ms;
+}
+
+.fade-in-directional {
+  animation: fadeInFromDirection 1s ease forwards;
+  animation-delay: 200ms;
+}
+
+.divider-appear {
+  animation: dividerAppear 1s ease forwards;
+  animation-delay: 200ms;
+}
+
+@keyframes fadeIn {
+  100%{opacity: 1}
+}
+
+@keyframes fadeInFromDirection {
+  100%{opacity: 1; transform: translate(0);}
+}
+
+@keyframes dividerAppear {
+  100%{width: 100%;}
+}
+

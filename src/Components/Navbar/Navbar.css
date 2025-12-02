@@ -1,0 +1,64 @@
+.Navbar {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    padding: 16px 0;
+    box-sizing: border-box;
+    z-index: 100;
+    box-shadow: 0 5px 10px -10px black;
+    opacity: 0;
+    transition: all 300ms ease;
+
+    background-color: white;
+}
+
+.Navbar-active {
+    opacity: 1;
+}
+
+.Navbar > a {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-decoration: none;
+    color: var(--body-text-color);
+    font-family: var(--header-font);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.Navbar > a::before, a::after {
+    content: '';
+    position: relative;
+    width: 0%;
+    height: 2px;
+
+    background-color: var(--forest);
+    transition: all 300ms ease;
+}
+
+.Navbar > a:hover::before, a:hover::after {
+    width: 100%;
+}
+
+.Navbar > a::before {
+    margin-bottom: 5px;
+}
+
+.Navbar > a::after {
+    margin-top: 5px;
+}
+
+@media(max-width: 700px) {
+    .Navbar {
+        height: 60px;
+    }
+    
+    .Navbar > a {
+        font-size: 12px;
+    }
+}

@@ -1,0 +1,105 @@
+.About {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 200px 10vw;
+    box-sizing: border-box;
+}
+
+.about-description {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 50px 50px 50px 200px;
+    box-sizing: border-box;
+    background-color: var(--leather-brown);
+    transform: translateX(40px);
+    opacity: 0;
+}
+
+.about-description > h1 {
+    margin: 0;
+
+    font-family: var(--header-font);
+    color: var(--gray-beige);
+}
+
+.about-divider {
+    position: relative;
+    width: 0%;
+    height: 2px;
+    margin: 20px 0;
+
+    background-color: var(--caffe-brown);
+}
+
+.about-description > p {
+    line-height: 30px;;
+    font-size: 14px;
+    color: var(--gray-beige);
+}
+
+.about-headshot {
+   position: relative;
+   transform: translateX(100px);
+   z-index: 2;
+}
+
+.about-headshot-image {
+    position: relative;
+    width: 400px;
+    opacity: 0;
+    transform: translateX(-20px);
+    box-shadow: var(--shadow);
+}
+
+.about-resume-btn {
+    margin-top: 30px;
+    width: 100px;
+    padding: 10px;
+    font-size: 14px;
+    font-family: var(--body-font);
+    color: var(--leather-brown);
+    background-color: transparent;
+    border: 2px solid var(--gray-beige);
+    background-color: var(--gray-beige);
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+    text-decoration: none;
+}
+
+.about-resume-btn:hover {
+    background-color: transparent;
+    color: var(--gray-beige);
+}
+
+@media(max-width: 700px) {
+    .About {
+        flex-direction: column;
+        align-items: center;
+        padding: 100px 0px 0px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-description {
+        width: 100% !important;
+        padding: 100px 50px 50px 50px;
+        box-sizing: border-box;
+        transform: translateX(0px) !important;
+    }
+
+    .about-headshot {
+        transform: translateX(0px);
+        margin-bottom: -75px;
+    }
+
+    .about-headshot-image {
+        width: 300px !important;
+    }
+
+    .about-divider {
+        width: 0%;
+    }
+}

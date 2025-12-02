@@ -1,0 +1,27 @@
+.Socials {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.Socials > a {
+    opacity: 0;
+}
+
+.Socials > a > img {
+    width: 32px;
+
+    transition: all 300ms ease;
+}
+
+.Socials > a > img:hover {
+    scale: 1.15;
+}
+
+#facebook-icon {
+    transform: translateX(-20px);
+}
+
+#youtube-icon {
+    transform: translateX(20px);
+}

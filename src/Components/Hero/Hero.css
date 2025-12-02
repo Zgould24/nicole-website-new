@@ -1,0 +1,196 @@
+.Hero {
+    /* display: grid;
+    place-items: center; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 5%;
+    box-sizing: border-box;
+
+    background-image: url('../../Images/UCF performance close up.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    background-position-x: 55%;
+}
+
+.hero-name-container {
+    position: relative;
+    width: 0%;
+    height: 0%;
+    border-top: 1px solid var(--rose);
+    border-left: 1px solid var(--rose);
+    border-right: 1px solid var(--rose);
+    opacity: 0;    
+
+    animation: revealBox 1s ease forwards;
+    animation-delay: 1s;
+}
+
+@keyframes revealBox {
+    10%{opacity: 1;}
+    50%{width: 100%; height: 0%; opacity: 1;}
+    100%{width: 100%; height: 100%; opacity: 1;}
+}
+
+.hero-name-bottom-wrapper {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+}
+
+.hero-bottom-border {
+    position: relative;
+    width: 0%;
+
+    border-bottom: 1px solid var(--rose);
+    animation: revealBottomBox 2s ease forwards;
+    animation-delay: 2s;
+}
+
+@keyframes revealBottomBox {
+    100%{width: 100%;}
+}
+
+.hero-title {
+    position: relative;
+    width: fit-content;
+    margin: 0 20px;
+    text-align: center;
+    white-space: nowrap;
+
+    color: var(--rose);
+    font-family: var(--title-font);
+    font-size: 64px;
+    font-weight: 200;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 2s;
+}
+
+@keyframes fadeIn {
+    100%{opacity: 1;}
+}
+
+.hero-interactive {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+
+    animation: fadeIn 1s ease forwards;
+    animation-delay: 2.5s;
+}
+
+.hero-subtitles {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-direction: row;
+
+    font-family: var(--header-font);
+    font-size: 48px;
+    font-weight: 500;
+    color: white;
+}
+
+.hero-subtitles > p {
+    margin: 0;
+    opacity: .25;
+}
+
+.hero-subtitle-musician {
+    animation: highlightTitle 9s ease infinite; 
+    animation-delay: 3s;
+}
+
+.hero-subtitle-teacher {
+    animation: highlightTitle 9s ease infinite; 
+    animation-delay: 6s;
+}
+
+.hero-subtitle-performer {
+    animation: highlightTitle 9s ease infinite; 
+    animation-delay: 9s;
+}
+
+.hero-subtitles > hr {
+    height: 50px;
+}
+
+.hero-about-button {
+    width: 100%;
+    padding: 10px;
+
+    background-color: transparent;
+    color: white;
+    font-family: var(--body-font);
+    font-size: 14px;
+    font-weight: 300;
+    border: none;
+    outline: 1px solid white;
+
+    transition: all 200ms ease;
+}
+
+.hero-about-button:hover {
+    cursor: pointer;
+    background-color: var(--forest);
+    outline-color: var(--forest);
+}
+
+@media(min-width: 701px) {
+    .Hero {
+        height: 100vh;
+    }
+}
+
+@media(max-width: 1100px) {
+    .Hero {
+        padding: 10%;
+    }
+}
+
+@media(max-width: 700px) {
+    .hero-title {
+        font-size: 32px !important;
+        transform: translateY(50%);
+    }
+
+    .hero-subtitles {
+        flex-direction: column !important;
+    }
+
+    .hero-subtitles {
+        font-size: 32px !important;
+    }
+
+    .hero-subtitles > hr {
+        display: none;
+    }
+
+    .hero-about-button {
+        margin: 20px 0;
+    }
+}
+
+@media(max-width: 350px) {
+    .hero-title {
+        margin: 0 !important;
+        transform: translateY(60%) !important;
+
+        font-size: 24px !important;
+    }
+}
+
+@keyframes highlightTitle {
+    5%{opacity: 0.5}
+    10%{opacity: 1}
+    35%{opacity: 1}
+    40%{opacity: 0.5}
+}
