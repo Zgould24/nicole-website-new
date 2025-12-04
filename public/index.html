@@ -6,7 +6,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-QFR980V6PR"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-QFR980V6PR');
@@ -36,6 +36,8 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
+  <link rel="preconnect" href="https://challenges.cloudflare.com">
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
   <title>Nicole Riddering</title>
 </head>
 

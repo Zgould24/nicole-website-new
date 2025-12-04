@@ -10,7 +10,6 @@ export default function Contact() {
 
     return (
         <div className="Contact" id="contact">
-            <Header headerText={"Contact Me!"} originY={80} offsetY={50}/>
             <ContactForm />
         </div>
     )

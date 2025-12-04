@@ -8,7 +8,7 @@
     padding: 5%;
     box-sizing: border-box;
 
-    background-image: url('../../Images/UCF performance close up.jpg');
+    background-image: url('../../Images/Frame 1.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: 0;
@@ -19,9 +19,9 @@
     position: relative;
     width: 0%;
     height: 0%;
-    border-top: 1px solid var(--rose);
-    border-left: 1px solid var(--rose);
-    border-right: 1px solid var(--rose);
+    border-top: 1px solid var(--gray-beige);
+    border-left: 1px solid var(--gray-beige);
+    border-right: 1px solid var(--gray-beige);
     opacity: 0;    
 
     animation: revealBox 1s ease forwards;
@@ -47,7 +47,7 @@
     position: relative;
     width: 0%;
 
-    border-bottom: 1px solid var(--rose);
+    border-bottom: 1px solid var(--gray-beige);
     animation: revealBottomBox 2s ease forwards;
     animation-delay: 2s;
 }
@@ -63,9 +63,9 @@
     text-align: center;
     white-space: nowrap;
 
-    color: var(--rose);
+    color: white;
     font-family: var(--title-font);
-    font-size: 64px;
+    font-size: 72px;
     font-weight: 200;
     opacity: 0;
     animation: fadeIn 1s ease forwards;
@@ -94,7 +94,7 @@
     flex-direction: row;
 
     font-family: var(--header-font);
-    font-size: 48px;
+    font-size: 84px;
     font-weight: 500;
     color: white;
 }
@@ -158,7 +158,7 @@
 
 @media(max-width: 700px) {
     .hero-title {
-        font-size: 32px !important;
+        font-size: 36px !important;
         transform: translateY(50%);
     }
 
@@ -167,7 +167,7 @@
     }
 
     .hero-subtitles {
-        font-size: 32px !important;
+        font-size: 56px !important;
     }
 
     .hero-subtitles > hr {

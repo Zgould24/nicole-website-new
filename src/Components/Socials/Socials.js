@@ -13,10 +13,20 @@ export default function Socials() {
 
     useEffect(() => {
         const observer = new IntersectionObserver((entries) => {
-            setIconVisible(entries[0].isIntersecting);
+            entries.forEach(entry => {
+                const isVisible = entry.isIntersecting;
+                const target = entry.target;
+
+                if(target === socialsRef && isVisible) {
+                    setIconVisible(isVisible);
+                    observer.unobserve(socialsRef.current);
+                }
+            })
         })
 
         observer.observe(socialsRef.current);
+
+        return () => {observer.disconnect()}
     }, [])
 
     return (

@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from 'react';
+import { useRef, useEffect, useState, useReducer } from 'react';
 
 import React from "react";
 import Header from '../Header/Header.js';
@@ -25,29 +25,39 @@ import img18 from '../../Images/CurtainsSneak-39.jpg';
 import img19 from '../../Images/IMG_2602.JPG';
 
 export default function Gallery() {
+    const galleryRef = useRef();
+    const [getGalleryState, setGalleryState] = useState(false);
+    const imageList = [img1,img2,img3,img4,img5,img6,img7,img8,img9,img10,img11,img12,img13,img14,img15,img16,img17,img18,img19];
+
+    useEffect(() => {
+        const images = document.querySelectorAll('.gallery-img');
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                entry.target.classList.add('fade-in-directional');
+                observer.unobserve(entry.target);
+            })
+        })
+
+        images.forEach(i => {
+            observer.observe(i);
+        })
+
+        return (() => {observer.disconnect()});
+    },[])
+
     return (
         <div className="Gallery" id="gallery">
             <Header headerText={"Gallery"} originY={0} offsetY={-30} marginBtmOffset={100}/>
-            <div className='gallery-masonry'>
-                <img className='gallery-img' src={img1} alt="" />
-                <img className='gallery-img' src={img2} alt="" />
-                <img className='gallery-img' src={img6} alt="" />
-                <img className='gallery-img' src={img3} alt="" />
-                <img className='gallery-img' src={img4} alt="" />
-                <img className='gallery-img' src={img5} alt="" />
-                <img className='gallery-img' src={img7} alt="" />
-                <img className='gallery-img' src={img8} alt="" />
-                <img className='gallery-img' src={img9} alt="" />
-                <img className='gallery-img' src={img10} alt="" />
-                <img className='gallery-img' src={img11} alt="" />
-                <img className='gallery-img' src={img12} alt="" />
-                <img className='gallery-img' src={img14} alt="" />
-                <img className='gallery-img' src={img15} alt="" />
-                <img className='gallery-img' src={img13} alt="" />
-                <img className='gallery-img' src={img16} alt="" />
-                <img className='gallery-img' src={img17} alt="" />
-                <img className='gallery-img' src={img18} alt="" />
-                <img className='gallery-img' src={img19} alt="" />
+            <div ref={galleryRef} className={`gallery-masonry ${getGalleryState ? 'fade-in-directional' : ''}`}>
+                {imageList.map((src, i) => {
+                    <img
+                        key={i}
+                        src={src}
+                        className="gallery-img"
+                        alt=""
+                    />
+            })}
             </div>
         </div>
     )
