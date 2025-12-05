@@ -48,15 +48,14 @@ export default function Gallery() {
 
     return (
         <div className="Gallery" id="gallery">
-            <Header headerText={"Gallery"} originY={0} offsetY={-30} marginBtmOffset={100}/>
             <div ref={galleryRef} className={`gallery-masonry ${getGalleryState ? 'fade-in-directional' : ''}`}>
                 {imageList.map((src, i) => {
-                    <img
+                    return(<img
                         key={i}
                         src={src}
                         className="gallery-img"
                         alt=""
-                    />
+                    />)
             })}
             </div>
         </div>

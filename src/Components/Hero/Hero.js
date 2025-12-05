@@ -2,10 +2,12 @@ import { useEffect } from 'react';
 
 import React from "react"
 import './Hero.css'
+import heroBackground from '../../Images/cover.png';
 
 export default function Hero() {
     return (
         <div className="Hero">
+            <img className="hero-background-image" src={heroBackground} alt=""></img>
             <div className="hero-name-container">
                 <div className="hero-name-bottom-wrapper">
                     <div className="hero-bottom-border"></div>

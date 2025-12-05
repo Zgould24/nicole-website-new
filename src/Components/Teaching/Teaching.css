@@ -13,7 +13,7 @@
     flex-direction: column;
     width: 100%;
     box-sizing: border-box;
-    background-color: var(--caffe-brown);
+    background-color: var(--smoked-taupe);
 }
 
 .teaching-image-grid > div {
@@ -71,20 +71,19 @@
 
 .teaching-title {
     position: relative;
-    width: 400px;
+    width: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
     font-family: var(--header-font);
-    background-color: var(--caffe-brown);
-    color: var(--gray-beige);
-    font-size: 72px;
+    background-color: var(--smoked-taupe);
+    color: var(--alabaster);
+    font-size: 56px;
     font-weight: 500;
     transform: translateX(50px);
     opacity: 0;
     animation-delay: 1s;
-    width: 0px;
     overflow: hidden;
 }
 
@@ -120,7 +119,7 @@
     align-items: center;
     padding: 30px;
     width: 100%;
-    background-color: var(--wet-sand);
+    background-color: var(--moss);
     box-sizing: border-box;
 }
 

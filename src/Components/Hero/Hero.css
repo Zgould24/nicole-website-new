@@ -7,31 +7,38 @@
     width: 100%;
     padding: 5%;
     box-sizing: border-box;
-
+/* 
     background-image: url('../../Images/Frame 1.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-position-y: 0;
-    background-position-x: 55%;
+    background-position-x: 55%; */
+}
+
+.hero-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: -1;
+    opacity: 0;
+    animation: fadeInHalf 2s ease forwards;
 }
 
 .hero-name-container {
     position: relative;
     width: 0%;
     height: 0%;
-    border-top: 1px solid var(--gray-beige);
-    border-left: 1px solid var(--gray-beige);
-    border-right: 1px solid var(--gray-beige);
-    opacity: 0;    
+    border-top: 1px solid var(--alabaster);
+    border-left: 1px solid var(--alabaster);
+    border-right: 1px solid var(--alabaster);
+    opacity: 0;
 
     animation: revealBox 1s ease forwards;
     animation-delay: 1s;
-}
-
-@keyframes revealBox {
-    10%{opacity: 1;}
-    50%{width: 100%; height: 0%; opacity: 1;}
-    100%{width: 100%; height: 100%; opacity: 1;}
 }
 
 .hero-name-bottom-wrapper {
@@ -52,10 +59,6 @@
     animation-delay: 2s;
 }
 
-@keyframes revealBottomBox {
-    100%{width: 100%;}
-}
-
 .hero-title {
     position: relative;
     width: fit-content;
@@ -70,10 +73,6 @@
     opacity: 0;
     animation: fadeIn 1s ease forwards;
     animation-delay: 2s;
-}
-
-@keyframes fadeIn {
-    100%{opacity: 1;}
 }
 
 .hero-interactive {
@@ -193,4 +192,22 @@
     10%{opacity: 1}
     35%{opacity: 1}
     40%{opacity: 0.5}
+}
+
+@keyframes revealBox {
+    10%{opacity: 1;}
+    50%{width: 100%; height: 0%; opacity: 1;}
+    100%{width: 100%; height: 100%; opacity: 1;}
+}
+
+@keyframes revealBottomBox {
+    100%{width: 100%;}
+}
+
+@keyframes fadeIn {
+    100%{opacity: 1;}
+}
+
+@keyframes fadeInHalf {
+    100%{opacity: 0.5;}
 }
